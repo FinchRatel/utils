@@ -1,9 +1,9 @@
-const randomNum = require('./randomNum');
+const randomNumber = require('./randomNumber');
 /**
  * 生成随机IP地址
  */
 function randomIP() {
-  return randomNum(1, 255) + '.' + randomNum(0, 255) + '.' + randomNum(0, 255) + '.' + randomNum(1, 255);
+  return randomNumber(1, 255) + '.' + randomNumber(0, 255) + '.' + randomNumber(0, 255) + '.' + randomNumber(1, 255);
 }
 
 /**
@@ -13,7 +13,7 @@ function randomIP() {
 function test() {
   setInterval(() => {
     console.log(randomIP());
-  }, 10);
+  }, 1000);
 }
 
 // test();

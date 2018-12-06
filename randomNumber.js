@@ -6,19 +6,19 @@
  * max: 最大值
  * len: 小数点后位数
  */
-function randomNum(min = 0, max = 100, len = 0) {
+function randomNumber(min = 0, max = 100, len = 0) {
   return Number((min + (max - min) * Math.random()).toFixed(len));
 }
 
 /**
  * test
  */
-function randomNumTest() {
+function randomNumberTest() {
   setInterval(() => {
-    console.log(randomNum(0, 100, 2));
+    console.log(randomNumber(0, 100, 2));
   }, 500);
 }
 
-// randomNumTest();
+randomNumberTest();
 
-module.exports = randomNum;
+module.exports = randomNumber;

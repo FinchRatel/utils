@@ -1,12 +1,12 @@
 let sleep = require('./sleep');
-let randomNum = require('./randomNum');
+let randomNumber = require('./randomNumber');
 let count = 0;
 
 function async (i, num) {
-  let time = randomNum(1000, 2000);
+  let time = randomNumber(1000, 2000);
   sleep(time).then(() => {
     count ++;
-    console.log('第' + Math.ceil(count / num) + '次--第' + i + '个--时间：' + time + 'ms');
+    console.log('第' + Math.ceil(count / num) + '轮--第' + i + '个--时间：' + time + 'ms');
     async(i, num);
   });
 }
@@ -17,4 +17,6 @@ function queue (num) {
   }
 }
 
-queue(randomNum(3, 8));
+// queue(randomNumber(3, 8));
+
+module.exports = queue;

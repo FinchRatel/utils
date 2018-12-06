@@ -1,12 +1,12 @@
-const randomNum = require('./randomNum');
-const randomNumStr = require('./randomNumStr');
+const randomNumber = require('./randomNumber');
+const randomNumberString = require('./randomNumberString');
 /**
  * 生成随机电话号码
  */
 function randomPhoneNumber() {
   let list = '3578';
-  let index = randomNum(0, 3);
-  return '1' + list[index] + randomNumStr(9);
+  let index = randomNumber(0, 3);
+  return '1' + list[index] + randomNumberString(9);
 }
 
 /**
